@@ -4,6 +4,8 @@ import Button from "./Button.jsx";
 const AddTaskForm = (props) => {
     const {
         addTask,
+        newTaskTitle,
+        setNewTaskTitle,
     } = props
 
     // при отправке формы браузер перезагружает стр.,
@@ -21,6 +23,8 @@ const AddTaskForm = (props) => {
                 className="todo__field"
                 label="New tast title"
                 id="new-task"
+                value={newTaskTitle}
+                onInput={(event) => setNewTaskTitle(event.target.value)}
             />
             <Button type="submit">Add</Button>
         </form>

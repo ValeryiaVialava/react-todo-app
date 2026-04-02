@@ -7,18 +7,21 @@ const SearchTaskForm = (props)=> {
     return (
         <form
             className="todo__form"
-            onSubmit={(event) => event.preventDefault()} //чтобы поиск выполнялся налету
+            //чтобы поиск выполнялся налету
+            onSubmit={(event) => event.preventDefault()}
         >
             <Field
                 className="todo__field"
                 label="Search task"
                 id="search-task"
                 type="search"
-                onInput={(event) => onSearchInput(event.target.value)} // обработчик события получает объект события (чаще всего его называют event)
+                // обработчик события получает объект события (чаще всего его называют event)
+                onInput={(event) => onSearchInput(event.target.value)}
             />
         </form>
     )
 }
 
 export default SearchTaskForm
+
 
